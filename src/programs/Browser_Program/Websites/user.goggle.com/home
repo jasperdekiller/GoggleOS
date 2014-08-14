@@ -1,0 +1,6 @@
+term.clear()
+uBack = paintutils.loadImage("Websites/user.goggle.com/Images/Backgrounds/.Background")
+paintutils.drawImage(uBack,1,1)
+term.setTextColor(colors.gray)
+term.setCursorPos(10,5)
+print("Jasper")
