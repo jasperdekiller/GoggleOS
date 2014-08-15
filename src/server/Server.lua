@@ -439,7 +439,7 @@ else
   else
   print("Generating some files..")
   fs.makeDir("Users")
-  sleep(0.4)
+  sleep(0.1)
   print("Type 'Reboot' again to start the server.")
   os.reboot()
   end
@@ -447,7 +447,7 @@ else
   else
     print("Generating some files..")
    fs.makeDir("Cloud_Backup")
-   sleep(0.4)
+   sleep(0.1)
    print("Type 'Reboot' again to start the server.")
    os.reboot()
    end
@@ -455,7 +455,7 @@ else
    else
     print("Generating some files..")
     fs.makeDir("Cloud_Users")
-    sleep(0.4)
+    sleep(0.1)
     print("Type 'Reboot' again to start the server.")
     os.reboot()
   end
@@ -463,7 +463,7 @@ else
    else
     print("Generating some files..")
     fs.makeDir("Online_Cloud_Users")
-    sleep(0.4)
+    sleep(0.1)
     print("Type 'Reboot' again to start the server.")
     os.reboot()
    end
@@ -471,7 +471,7 @@ else
     else
      print("Generating some files..")
      fs.makeDir("Online_Websites")
-     sleep(0.4)
+     sleep(0.1)
      print("Type 'Reboot' again to start the server.")
      os.reboot()
     end
@@ -479,7 +479,7 @@ else
      else
       print("Generating some files..")
       fs.makeDir("Websites")
-      sleep(0.4)
+      sleep(0.1)
       print("Type 'Reboot' again to start the server.")
       os.reboot()
     end
