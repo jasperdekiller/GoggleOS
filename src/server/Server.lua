@@ -1,3 +1,10 @@
+if fs.exists("Installer") then
+  fs.delete("Installer")
+  shell.run("Startup")
+ elseif fs.exists("background") then
+  fs.delete("background")
+  shell.run("Startup")
+ end
 if fs.exists("Users") and 
    fs.exists("Cloud_Backup") and
    fs.exists("Cloud_Users") and 
