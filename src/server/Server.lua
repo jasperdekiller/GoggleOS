@@ -7,6 +7,7 @@ if fs.exists("Users") and
 
 term.clear()
 term.setCursorPos(1,1)
+print("SERVER ONLINE, ID: "..os.getComputerID())
 xPos, yPos = term.getSize()
 Start = true
 banCheck = true
@@ -432,41 +433,47 @@ else
   print("Generating some files..")
   fs.makeDir("Users")
   sleep(0.4)
-  print("Type 'Server' again to start the server.")
+  print("Type 'Reboot' again to start the server.")
+  os.reboot()
   end
  if fs.exists("Cloud_Backup") then
   else
     print("Generating some files..")
    fs.makeDir("Cloud_Backup")
    sleep(0.4)
-   print("Type 'Server' again to start the server.")
+   print("Type 'Reboot' again to start the server.")
+   os.reboot()
    end
   if fs.exists("Cloud_Users") then
    else
     print("Generating some files..")
     fs.makeDir("Cloud_Users")
     sleep(0.4)
-    print("Type 'Server' again to start the server.")
+    print("Type 'Reboot' again to start the server.")
+    os.reboot()
   end
  if fs.exists("Online_Cloud_Users") then
    else
     print("Generating some files..")
     fs.makeDir("Online_Cloud_Users")
     sleep(0.4)
-    print("Type 'Server' again to start the server.")
+    print("Type 'Reboot' again to start the server.")
+    os.reboot()
    end
   if fs.exists("Online_Websites") then
     else
      print("Generating some files..")
      fs.makeDir("Online_Websites")
      sleep(0.4)
-     print("Type 'Server' again to start the server.")
+     print("Type 'Reboot' again to start the server.")
+     os.reboot()
     end
    if fs.exists("Websites") then
      else
       print("Generating some files..")
       fs.makeDir("Websites")
       sleep(0.4)
-      print("Type 'Server' again to start the server.")
+      print("Type 'Reboot' again to start the server.")
+      os.reboot()
     end
   end
