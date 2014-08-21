@@ -144,6 +144,7 @@ Start = function()
     file = fs.open("Users/"..rUsername, "w")
     file.write(rPassword)
     file.close()
+    fs.makeDir("Cloud_Users/"..rUsername)
     sleep(1)
     print("Console: Successfully saved "..rUsername.."'s account.")
     rednet.send(id, "@Saved")
@@ -196,9 +197,6 @@ Start = function()
     id, Uname = rednet.receive()
     id, Pass = rednet.receive()
      Check = LoginCheck(Uname, Pass)
-    if fs.exists("Online_Cloud_Users/"..Uname) then
-      rednet.send(id, "@AL")
-     else
      if Check == true then
        fs.makeDir("Online_Cloud_Users/"..Uname)
       if fs.exists("Cloud_Users/"..Uname) then
@@ -236,7 +234,6 @@ Start = function()
       print("User: ",Uname," failed to log in to his Goggle Cloud.")
       print("")
        rednet.send(id, "@WP")
-     end
     end
 elseif x == "@Upload" then
     id, Uname = rednet.receive()
