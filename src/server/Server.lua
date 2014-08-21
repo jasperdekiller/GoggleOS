@@ -109,7 +109,32 @@ function Upload()
 
 Start = function()
   id, x = rednet.receive()
-   if x == "@searchWeb" then
+   if x == "@ConnectRequest" then
+    done = 0
+   repeat
+    term.clear()
+    term.setCursorPos(1,1)
+    print("ID: '"..id.."' wants to connect to the server.")
+    write("Y/N: ")
+    IDra = read()
+   if IDra:upper() == "Y" then
+    rednet.send(id, "@Approved")
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Console: Accepted a connect request from ID: "..id)
+    done = 1
+   elseif IDra:upper() == "N" then
+    rednet.send(id, "@Denied")
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Console: Denied a connect request from ID: "..id)
+    done = 1
+   end
+
+
+    until done == 1
+
+   elseif x == "@searchWeb" then
     id, websiteName = rednet.receive()
     Search = searchWebsite(websiteName)
     if Search == true then
